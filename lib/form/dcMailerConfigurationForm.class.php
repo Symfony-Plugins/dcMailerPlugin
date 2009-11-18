@@ -117,7 +117,7 @@ class dcMailerConfigurationForm extends BasedcMailerConfigurationForm
   public function getIsSecureOnChangeJS()
   {
     $js = "var disable = (this.checked ? '' : 'disabled');";
-    foreach (array('username', 'password') as $field)
+    foreach (array('username', 'password', 'encryption') as $field)
     {
       $js .= " document.getElementById('".$this->getName()."_".$field."').disabled = disable;";
     }
