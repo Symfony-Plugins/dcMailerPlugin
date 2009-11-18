@@ -1,0 +1,8 @@
+dc_mailer_configuration:
+  class: sfPropelRouteCollection
+  options:
+    model:                dcMailerConfiguration
+    module:               dc_mailer_configuration
+    prefix_path:          dc_mailer_configuration
+    column:               id
+    with_wildcard_routes: true

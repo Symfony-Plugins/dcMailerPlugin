@@ -1,0 +1,21 @@
+default:
+  dc_mailer_plugin:
+    # Vendor selection: currently only supporting SwiftMailer
+    vendor:           SwiftMailer
+
+    # Mail logging configuration:
+    mail_logging:
+      # whether mail logging is enabled or not
+      enabled:        false
+
+      # if mail logging is enabled, here goes specific logging strategies configuration
+      strategies:
+        # database logging strategy
+        database:
+          enabled:    true
+        # blind carbon copy strategy
+        blind_carbon_copy:
+          enabled:    true
+          params:
+            # which address to use as extra bcc's (can be one or an array):
+            send_to:  [my.address@my.mail.com, my.cousins.address@my.cousins.mail.com]

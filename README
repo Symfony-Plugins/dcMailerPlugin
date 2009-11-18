@@ -1,0 +1,144 @@
+# dcMailerPlugin
+
+## Introduction
+
+Mailing management plugin prepared to be library-agnostic.
+
+It provides -aside from the basic mail libraries features- some advanced features,
+such as:
+
+    - mail configuration module (web-based),
+    - configurable mail logging strategies which sit on top of the underlying library
+
+## Supported libraries
+
+Currently only SwiftMailer (http://swiftmailer.org/) library is supported.
+It is included in this plugin.
+
+## Mail configuration module
+
+The mail configuration module provides a web-based user interface for selecting
+the basic configuration for mail sending, which includes:
+
+    - transport to be used (SMTP, Mail, Sendmail)
+    - server adddress, port and authentication information
+
+And as many different configurations can be stored at the same time, the user
+may choose individually which one is the active one on every situation.
+
+Remember that you *must* enable this module prior to using it!
+
+## Mail logging module
+
+The mail logging module is a frontend for Database logging strategy, and thus
+it provides a web-based user interface for checking the entries for the mail log.
+
+Remember that you *must* enable this module prior to using it!
+
+## Configuration
+
+The only needed (yet optional) configuration must be in the app.yml (You might
+copy the provided app.yml.sample file to your project):
+
+  {{
+
+    ## app.yml
+    default:
+      dc_mailer_plugin:
+        # Vendor selection: currently only supporting SwiftMailer
+        vendor:           SwiftMailer
+
+        # Mail logging configuration:
+        mail_logging:
+          # whether mail logging is enabled or not
+          enabled:        false
+
+          # if mail logging is enabled, here goes specific logging strategies configuration
+          strategies:
+            # database logging strategy
+            database:
+              enabled:    true
+            # blind carbon copy strategy
+            blind_carbon_copy:
+              enabled:    true
+              params:
+                # which address to use as extra bcc's (can be one or an array):
+                send_to:  [my.address@my.mail.com, my.cousins.address@my.cousins.mail.com]
+
+  }}
+
+In order to enable the configuration management module, enable it on your application's
+settings.yml file:
+
+  {{
+
+    ## settings.yml
+    #..
+    all:
+      .settings:
+        enabled_modules: [default, dc_mailer_configuration]
+
+  }}
+
+In order to enable the mail log module, enable it on your application's
+settings.yml file:
+
+  {{
+
+    ## settings.yml
+    #..
+    all:
+      .settings:
+        enabled_modules: [default, dc_mailer_mail_log]
+
+  }}
+
+
+## Basic usage
+
+All main classes provide a fluent interface, are well-documented, and provide
+standard methods for mail creation and sending.
+
+First, you need to create a new instance of a dcMail object. You may use the
+currently active configuration or specify your very own:
+
+  {{
+
+    <?php
+
+      // Use the currently active configuration (you may get an error if none is active)
+      $mail = dcMailer::getMail();
+
+      // ...or use a specific one:
+      $my_configuration = new dcMailerConfiguration(); // Could also be retrieved from database
+      // ..configure $my_configuration..
+      $mail = dcMailer::getMail($my_configuration);
+    ?>
+
+  }}
+
+And then set the mail information and send it:
+
+  {{
+
+    <?php
+
+      // New dcMail instance:
+      $mail = dcMailer::getMail();
+
+      // Set mail information:
+      $mail
+        ->setFrom(array('john.doe@server.com' => 'John Doe', 'jane.doe@server.com' => 'Jane Doe'))
+        ->addFrom('julien.doe@server.com', 'Julien Doe')
+        ->addTo('james.doe@server.com')
+        ->addBcc('mistery.man@mistery.server.com')
+        ->addCc('another-visible-man@another-server.com', 'Another visible man')
+        ->setSubject('Mail\'s subject goes here')
+        ->setBody('Mail\'s body goes here.', 'text/plain');
+
+      // Send the mail:
+      $raw_mail = $mail->send();
+      // Now $raw_mail holds the raw mail message.
+    ?>
+
+  }}

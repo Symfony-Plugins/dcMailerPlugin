@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext" date="2009-11-13T12:40:33Z">
+    <header/>
+    <body>
+      <!-- Interactions, titles and so on -->
+      <trans-unit>
+        <source>Mailer configurations list</source>
+        <target>Listado de configuraciones de correo electrónico</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Make the active configuration</source>
+        <target>Marcar como la configuración activa</target>
+      </trans-unit>
+      <trans-unit>
+        <source>No authentication required</source>
+        <target>No requiere autenticación</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Show/hide text</source>
+        <target>Mostrar/ocultar texto</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Create a new mailer configuration</source>
+        <target>Crear una nueva configuración de correo electrónico</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit "%%name%%" mailer configuration</source>
+        <target>Editar la configuración de correo electrónico "%%name%%"</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Required.</source>
+        <target>Este campo es requerido.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>"%value%" must be at least %min%.</source>
+        <target>"%value%" debe ser mayor o igual que %min%.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>"%value%" must be at most %max%.</source>
+        <target>"%value%" debe ser menor o igual que %max%.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Tip: the common value for this field is 25.</source>
+        <target>Ayuda: el valor común para este campo es 25.</target>
+      </trans-unit>
+
+      <trans-unit>
+        <source>Mail log entries list</source>
+        <target>Listado de entradas al registro de correos electrónicos</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Mail log entry details</source>
+        <target>Detalles de la entrada al registro de correos electrónicos</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Show entry</source>
+        <target>Ver detalles</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Sent at</source>
+        <target>Fecha de envío</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Raw mail</source>
+        <target>Mensaje en crudo</target>
+      </trans-unit>
+      <trans-unit>
+        <source>From</source>
+        <target>Desde</target>
+      </trans-unit>
+      <trans-unit>
+        <source>to</source>
+        <target>hasta</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Entry information</source>
+        <target>Información de la entrada</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Go back</source>
+        <target>Volver al listado</target>
+      </trans-unit>
+
+      <!-- Field names -->
+      <trans-unit>
+        <source>Name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Transport</source>
+        <target>Mecanismo de distribución</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Server</source>
+        <target>Servidor</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Port number</source>
+        <target>Número de puerto</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Requires authentication</source>
+        <target>Requiere autenticación</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Username</source>
+        <target>Nombre de usuario</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password</source>
+        <target>Contraseña</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is the active configuration</source>
+        <target>Es la configuración activa</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is active</source>
+        <target>Activa</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Encryption</source>
+        <target>Encriptación</target>
+      </trans-unit>
+      <trans-unit>
+        <source>SSL - Secure Socket Layer</source>
+        <target>SSL - Protocolo de Capa de Conexión Segura</target>
+      </trans-unit>
+      <trans-unit>
+        <source>TLS - Transport Layer Security</source>
+        <target>TLS - Seguridad de la Capa de Transporte</target>
+      </trans-unit>
+      <trans-unit>
+        <source>No encryption required</source>
+        <target>No se required encriptación</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

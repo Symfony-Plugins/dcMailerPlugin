@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header />
+    <body>
+      <trans-unit>
+        <source>New configuration</source>
+        <target>Crear nueva configuración</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit configuration</source>
+        <target>Editar configuración</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Delete configuration</source>
+        <target>Borrar configuración</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The selected configuration is already the active one</source>
+        <target>La configuración seleccionada ya es la activa</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The selected configuration has been successfully made active</source>
+        <target>La configuración seleccionada fue marcada como activa satisfactoriamente</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Delete entry</source>
+        <target>Eliminar entrada</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Mail log creation via user interface is disabled.</source>
+        <target>La creación de entradas de registro vía interfaz de usuario está deshabilitada.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Mail log edition via user interface is disabled.</source>
+        <target>La edición de entradas de registro vía interfaz de usuario está deshabilitada.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,45 @@
+connection:  propel
+description: dcMailerPlugin database schema
+package:     plugins.dcMailerPlugin.lib.model
+
+classes:
+  dcMailerConfiguration:
+    tableName:    dc_mailer_configuration
+    columns:
+      id:
+      transport:
+        type:     integer
+        default:  1
+        required: true
+      name:
+        type:     varchar(100)
+        required: true
+        unique:   true
+      server:
+        type:     varchar(255)
+        default:  localhost
+      port:
+        type:     integer
+        default:  25
+      is_secure:
+        type:     boolean
+        required: true
+        default:  false
+      encryption:
+        type:     integer
+        required: false
+      username:
+        type:     varchar(255)
+      password:
+        type:     varchar(255)
+      is_active:
+        type:     boolean
+        default:  false
+
+  dcMailerMailLog:
+    tableName:    dc_mailer_mail_log
+    columns:
+      id:
+      created_at:
+      raw_mail:
+        type:     blob

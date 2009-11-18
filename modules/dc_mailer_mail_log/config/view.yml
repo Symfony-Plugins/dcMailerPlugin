@@ -1,0 +1,2 @@
+all:
+  stylesheets: [/dcMailerPlugin/css/dc_mailer_configuration.css]

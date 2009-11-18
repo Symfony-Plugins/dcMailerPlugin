@@ -1,0 +1,68 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           dcMailerConfiguration
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dc_mailer_configuration
+    with_propel_route:     1
+
+    config:
+      actions: ~
+
+      fields:
+        name:
+          label: Name
+        transport:
+          label: Transport
+        server:
+          label: Server
+        port:
+          label: Port number
+        is_secure:
+          label: Requires authentication
+        username:
+          label: Username
+        password:
+          label: Password
+        is_active:
+          label: Is the active configuration
+
+      list:
+        title:    Mailer configurations list
+        display:  [is_active, name, server, port, is_secure]
+        layout:   stacked
+        params: |
+          <div class="mailer_configuration_stacked">
+            <h2 class="dc_mailer_configuration_name">%%is_active%% %%name%% (%%transport_name%%)</h2>
+            <div>%%_server_information%%</div>
+            <div>%%_authentication_information%%</div>
+            <div>%%_encryption_information%%</div>
+          </div>
+        fields:
+          is_active:
+            label:  Is active
+        actions:
+          _new:
+            label:  New configuration
+        object_actions:
+          _edit:
+            label:  Edit configuration
+          set_as_active:
+            label:  Make the active configuration
+            action: makeActive
+          _delete:
+            label:  Delete configuration
+
+      filter:  ~
+      
+      form:    ~
+
+      edit:
+        title:  Edit "%%name%%" mailer configuration
+
+      new:
+        title:  Create a new mailer configuration

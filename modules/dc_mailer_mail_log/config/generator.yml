@@ -1,0 +1,39 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           dcMailerMailLog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dc_mailer_mail_log
+    with_propel_route:     1
+
+    config:
+      actions: ~
+
+      fields:
+        created_at:
+          label: Sent at
+        raw_mail:
+          label: Raw mail
+
+      list:
+        title:   Mail log entries list
+        display: [created_at]
+        actions: {}
+        object_actions:
+          show:
+            action: show
+            label:  Show entry
+          _delete:
+            label:  Delete entry
+
+      filter:  ~
+
+      form:    ~
+
+      edit:    ~
+
+      new:     ~

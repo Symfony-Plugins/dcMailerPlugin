@@ -1,0 +1,31 @@
+#sf_admin_container .mailer_configuration_stacked img
+{
+  vertical-align: middle;
+}
+
+#sf_admin_container ul.sf_admin_td_actions li
+{
+  display: block;
+  margin-bottom: 3px;
+}
+
+#sf_admin_container ul li.sf_admin_action_set_as_active a
+{
+  background-image: url('../images/control-power.png');
+}
+
+#sf_admin_container ul li.sf_admin_action_show a
+{
+  background-image: url('../images/show.png');
+}
+
+.dc_mailer_configuration_name
+{
+  margin: 0 0 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+#sf_admin_container .help br
+{
+  display: none;
+}
