@@ -1,8 +1,8 @@
 generator:
-  class: sfPropelGenerator
+  class: sfPropelRevisitedGenerator
   param:
     model_class:           dcMailerConfiguration
-    theme:                 admin
+    theme:                 chuckied
     non_verbose_templates: true
     with_show:             false
     singular:              ~
@@ -45,7 +45,9 @@ generator:
         fields:
           is_active:
             label:  Is active
-        actions:
+        actions: {}
+        slot_name:  actions
+        slot_actions:
           _new:
             label:  New configuration
         object_actions:
@@ -54,15 +56,29 @@ generator:
           set_as_active:
             label:  Make the active configuration
             action: makeActive
+          test:
+            label: Test configuration
+            action: test
           _delete:
             label:  Delete configuration
 
       filter:  ~
       
-      form:    ~
+      form:
+        actions: {}
 
       edit:
         title:  Edit "%%name%%" mailer configuration
+        slot_name:  actions
+        slot_actions:
+          _list:
+          _save:
+            label: Save configuration
 
       new:
         title:  Create a new mailer configuration
+        slot_name:  actions
+        slot_actions:
+          _list:
+          _save:
+            label: Save configuration

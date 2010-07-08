@@ -13,6 +13,10 @@
         <target>Editar configuración</target>
       </trans-unit>
       <trans-unit>
+        <source>Save configuration</source>
+        <target>Guardar configuración</target>
+      </trans-unit>
+      <trans-unit>
         <source>Delete configuration</source>
         <target>Borrar configuración</target>
       </trans-unit>
@@ -35,6 +39,14 @@
       <trans-unit>
         <source>Mail log edition via user interface is disabled.</source>
         <target>La edición de entradas de registro vía interfaz de usuario está deshabilitada.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The test worked just fine. See raw e-mail for details on the server response.</source>
+        <target>La prueba fue exitosa. A continuación se muestra la respuesta en crudo del servidor para el correo electrónico enviado.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The test failed. See error description below for more information.</source>
+        <target>La prueba falló. A continuación se detalla el mensaje de error.</target>
       </trans-unit>
     </body>
   </file>

@@ -29,3 +29,8 @@
 {
   display: none;
 }
+
+#sf_admin_container ul li.sf_admin_action_test a
+{
+  background-image: url('../images/mail--arrow.png');
+}

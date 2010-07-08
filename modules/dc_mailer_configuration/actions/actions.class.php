@@ -28,4 +28,57 @@ class dc_mailer_configurationActions extends autoDc_mailer_configurationActions
     $this->getUser()->setFlash('notice', 'The selected configuration has been successfully made active');
     $this->redirect('@dc_mailer_configuration');
   }
+
+  public function executeTest(sfWebRequest $request)
+  {
+    $this->dc_mailer_configuration = $this->getRoute()->getObject();
+
+    $this->form = new dcMailerConfigurationTestForm();
+
+    $this->form->setDefaults(array(
+      'dc_mailer_configuration_id' => $this->dc_mailer_configuration->getPrimaryKey()
+    ));
+  }
+
+  public function executeDoTest(sfWebRequest $request)
+  {
+    $this->form = new dcMailerConfigurationTestForm();
+
+    $this->dc_mailer_configuration = dcMailerConfigurationPeer::retrieveByPK($request->getParameter($this->form->getName().'[dc_mailer_configuration_id]'));
+
+    $this->redirectUnless($this->dc_mailer_configuration, 'dc_mailer_configuration');
+
+    $this->form->bind($request->getParameter($this->form->getName()));
+
+    if ($this->form->isValid())
+    {
+      $dc_mail = dcMailer::getMail($this->dc_mailer_configuration);
+
+      $dc_mail
+        ->setFrom($this->form->getValue('from'))
+        ->addTo($this->form->getValue('to'))
+        ->setSubject($this->form->getValue('subject'))
+        ->setBody($this->form->getValue('body'));
+
+      try
+      {
+        $this->raw_mail = $dc_mail->send();
+
+        $this->getUser()->setFlash('notice', 'The test worked just fine. See raw e-mail for details on the server response.');
+      }
+      catch (Exception $e)
+      {
+        $this->getUser()->setFlash('error', 'The test failed. See error description below for more information.');
+
+        $this->error = $e->getMessage();
+
+        return sfView::ERROR;
+      }
+    }
+    else
+    {
+      $this->setTemplate('test');
+    }
+  }
+
 }

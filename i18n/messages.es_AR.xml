@@ -101,6 +101,10 @@
         <target>Número de puerto</target>
       </trans-unit>
       <trans-unit>
+        <source>Port</source>
+        <target>Número de puerto</target>
+      </trans-unit>
+      <trans-unit>
         <source>Requires authentication</source>
         <target>Requiere autenticación</target>
       </trans-unit>
@@ -121,8 +125,12 @@
         <target>Activa</target>
       </trans-unit>
       <trans-unit>
+        <source>Is secure</source>
+        <target>Es segura</target>
+      </trans-unit>
+      <trans-unit>
         <source>Encryption</source>
-        <target>Encriptación</target>
+        <target>Encripción</target>
       </trans-unit>
       <trans-unit>
         <source>SSL - Secure Socket Layer</source>
@@ -134,7 +142,43 @@
       </trans-unit>
       <trans-unit>
         <source>No encryption required</source>
-        <target>No se required encriptación</target>
+        <target>No se requiere encriptación</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Test configuration</source>
+        <target>Probar esta configuración</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Test configuration "%%configuration%%"</source>
+        <target>Probar configuración "%%configuration%%"</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Send to</source>
+        <target>Destinatario</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Send from</source>
+        <target>Remitente</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Subject</source>
+        <target>Asunto</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Body</source>
+        <target>Cuerpo</target>
+      </trans-unit>
+      <trans-unit>
+        <source>This value is expected to be a valid e-mail address.</source>
+        <target>El valor de este campo debe ser una dirección válida de correo electrónico.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit configuration</source>
+        <target>Editar configuración</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Done</source>
+        <target>Listo</target>
       </trans-unit>
     </body>
   </file>
